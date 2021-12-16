@@ -38,4 +38,4 @@ jobs:
       - name: Run linter
         # Run Linter
         run: |
-          make eslint
+          make lint
