@@ -13,3 +13,5 @@
 ## Brain-calc game
 
 [![asciicast](https://asciinema.org/a/txZTdOfaifnCzjrbuFG7CW7ed.svg)](https://asciinema.org/a/txZTdOfaifnCzjrbuFG7CW7ed)
+
+## Brain-gcd game
