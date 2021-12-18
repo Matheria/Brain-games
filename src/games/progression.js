@@ -26,7 +26,7 @@ const brainProgressionGame = () => {
   for (let count = 1; count <= gameRounds; count += 1) {
     const length = getRandomNumber(minLength, maxLength);
     const firstElement = getRandomNumber();
-    const step = getRandomNumber(2, 50);
+    const step = getRandomNumber(2, 10);
     const hiddenSymbol = getRandomNumber(0, length - 1);
     const progression = generateProgression(length, firstElement, step);
     const hiddenNum = (progression.splice(hiddenSymbol, 1, '..')).toString();
