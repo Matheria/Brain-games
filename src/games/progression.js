@@ -29,14 +29,14 @@ const brainProgressionGame = () => {
     const step = getRandomNumber(2, 10);
     const hiddenSymbol = getRandomNumber(0, length - 1);
     const progression = generateProgression(length, firstElement, step);
-    const hiddenNum = (progression.splice(hiddenSymbol, 1, '..')).toString();
-    const question1 = `Question: ${progression.join(' ')}`;
-    console.log(question1);
+    const rightAnswer = (progression.splice(hiddenSymbol, 1, '..')).toString();
+    const question = `Question: ${progression.join(' ')}`;
+    console.log(question);
     const userAnswer = readlineSync.question('Answer: ');
-    if (userAnswer === hiddenNum) {
+    if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${hiddenNum}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       return console.log(`Let's try again, ${name}`);
     }
   }
