@@ -1,9 +1,10 @@
-import readlineSync from 'readline-sync';
+import gameEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const gameRules = 'What is the result of the expression?';
-const gameRounds = 3;
 const operators = ['+', '-', '*'];
+const minNum = 1;
+const maxNum = 100;
 
 const calculation = (num1, num2, operator) => {
   switch (operator) {
@@ -18,29 +19,16 @@ const calculation = (num1, num2, operator) => {
   }
 };
 
-const brainCalcGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log(gameRules);
+const generateGameData = () => {
+  const number1 = getRandomNumber(minNum, maxNum);
+  const number2 = getRandomNumber(minNum, maxNum);
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
+  const question = `Question: ${number1} ${operator} ${number2}`;
+  const userAnswer = calculation(number1, number2, operator).toString();
 
-  for (let count = 1; count <= gameRounds; count += 1) {
-    const number1 = getRandomNumber(1, 10);
-    const number2 = getRandomNumber(1, 10);
-    const operator = operators[getRandomNumber(0, operators.length - 1)];
-    const question = `Question: ${number1} ${operator} ${number2}`;
-    console.log(question);
-    const calculationResult = calculation(number1, number2, operator).toString();
-    const userAnswer = readlineSync.question('Answer: ');
-    if (userAnswer === calculationResult) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${calculationResult}'.`);
-      return console.log(`Let's try again, ${name}`);
-    }
-  }
-
-  return console.log(`Congratulations, ${name}`);
+  return [question, userAnswer];
 };
 
-export default brainCalcGame;
+export default () => {
+  gameEngine(gameRules, generateGameData);
+};
