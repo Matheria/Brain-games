@@ -1,14 +1,17 @@
-import readlineSync from 'readline-sync';
+import gameEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const gameRules = 'What number is missing in the progression?';
-const gameRounds = 3;
 const minLength = 5;
 const maxLength = 10;
+const minFirstEl = 1;
+const maxFirstEl = 50;
+const minStep = 2;
+const maxStep = 25;
 
-const generateProgression = (length, firstElement, step) => {
+const generateProgression = (length, firstEl, step) => {
   const progression = [];
-  let num = firstElement;
+  let num = firstEl;
   while (progression.length < length) {
     progression.push(num);
     num += step;
@@ -17,31 +20,18 @@ const generateProgression = (length, firstElement, step) => {
   return progression;
 };
 
-const brainProgressionGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log(gameRules);
+const generateGameData = () => {
+  const length = getRandomNumber(minLength, maxLength);
+  const firstEl = getRandomNumber(minFirstEl, maxFirstEl);
+  const step = getRandomNumber(minStep, maxStep);
+  const hiddenSymbol = getRandomNumber(0, length - 1);
+  const progression = generateProgression(length, firstEl, step);
+  const userAnswer = (progression.splice(hiddenSymbol, 1, '..')).toString();
+  const question = `${progression.join(' ')}`;
 
-  for (let count = 1; count <= gameRounds; count += 1) {
-    const length = getRandomNumber(minLength, maxLength);
-    const firstElement = getRandomNumber();
-    const step = getRandomNumber(2, 10);
-    const hiddenSymbol = getRandomNumber(0, length - 1);
-    const progression = generateProgression(length, firstElement, step);
-    const rightAnswer = (progression.splice(hiddenSymbol, 1, '..')).toString();
-    const question = `Question: ${progression.join(' ')}`;
-    console.log(question);
-    const userAnswer = readlineSync.question('Answer: ');
-    if (userAnswer === rightAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-      return console.log(`Let's try again, ${name}`);
-    }
-  }
-
-  return console.log(`Congratulations, ${name}`);
+  return [question, userAnswer];
 };
 
-export default brainProgressionGame;
+export default () => {
+  gameEngine(gameRules, generateGameData);
+};
