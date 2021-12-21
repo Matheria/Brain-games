@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const minNum = 1;
 const maxNum = 100;
 
@@ -27,5 +27,5 @@ const generateGameData = () => {
 };
 
 export default () => {
-  gameEngine(gameRules, generateGameData);
+  gameEngine(gameRule, generateGameData);
 };

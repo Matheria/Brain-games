@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const gameRules = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 const minLength = 5;
 const maxLength = 10;
 const minFirstEl = 1;
@@ -33,5 +33,5 @@ const generateGameData = () => {
 };
 
 export default () => {
-  gameEngine(gameRules, generateGameData);
+  gameEngine(gameRule, generateGameData);
 };

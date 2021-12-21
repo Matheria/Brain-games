@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const minNum = 1;
 const maxNum = 100;
@@ -15,5 +15,5 @@ const generateGameData = () => {
 };
 
 export default () => {
-  gameEngine(gameRules, generateGameData);
+  gameEngine(gameRule, generateGameData);
 };

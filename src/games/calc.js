@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const gameRules = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 const minNum = 1;
 const maxNum = 100;
@@ -30,5 +30,5 @@ const generateGameData = () => {
 };
 
 export default () => {
-  gameEngine(gameRules, generateGameData);
+  gameEngine(gameRule, generateGameData);
 };
