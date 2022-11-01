@@ -19,6 +19,7 @@ npm link
 `$ brain-even`
 
 [![asciicast](https://asciinema.org/a/sIHwXMNUOjQUKCR8P58XDW3VP.svg)](https://asciinema.org/a/sIHwXMNUOjQUKCR8P58XDW3VP)
+Run brain-even. Answer "yes" if the number is even, otherwise answer "no".
 
 ## Brain-calc game
 
