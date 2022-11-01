@@ -1,9 +1,7 @@
 # Brain games
 
 [![Actions Status](https://github.com/Matheria/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Matheria/frontend-project-lvl1/actions)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/8d17f87570a1272730a2/maintainability)](https://codeclimate.com/github/Matheria/frontend-project-lvl1/maintainability)
-
 [![Node CI](https://github.com/Matheria/frontend-project-lvl1/actions/workflows/node.yml/badge.svg)](https://github.com/Matheria/frontend-project-lvl1/actions)
 
 ## Install
