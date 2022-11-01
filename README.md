@@ -19,28 +19,32 @@ npm link
 `$ brain-even`
 
 [![asciicast](https://asciinema.org/a/sIHwXMNUOjQUKCR8P58XDW3VP.svg)](https://asciinema.org/a/sIHwXMNUOjQUKCR8P58XDW3VP)
-Run brain-even. Answer "yes" if the number is even, otherwise answer "no".
+Run `brain-even`. Answer "yes" if the number is even, otherwise answer "no".
 
 ## Brain-calc game
 
 `$ brain-calc`
 
 [![asciicast](https://asciinema.org/a/txZTdOfaifnCzjrbuFG7CW7ed.svg)](https://asciinema.org/a/txZTdOfaifnCzjrbuFG7CW7ed)
+Run `brain-calc`. Calculate the result of the expression.
 
 ## Brain-gcd game
 
 `$ brain-gcd`
 
 [![asciicast](https://asciinema.org/a/ybrLZ6ZCE4Q9sOHR5i9PpgA6D.svg)](https://asciinema.org/a/ybrLZ6ZCE4Q9sOHR5i9PpgA6D)
+Run `brain-gcd`. Find the greatest common divisor of given numbers.
 
 ## Brain-progression game
 
 `$ brain-progression`
 
 [![asciicast](https://asciinema.org/a/STKI9ZUV63ELlevgOoVeMIocy.svg)](https://asciinema.org/a/STKI9ZUV63ELlevgOoVeMIocy)
+Run `brain-progression`. What number is missing in the progression?
 
 ## Brain-prime game
 
 `$ brain-prime`
 
 [![asciicast](https://asciinema.org/a/x9r05xGpraiWNMz2DM4ghQYI0.svg)](https://asciinema.org/a/x9r05xGpraiWNMz2DM4ghQYI0)
+Run `brain-prime`. Answer "yes" if given number is prime. Otherwise answer "no".
